@@ -1,0 +1,139 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Nanum Pen Script', cursive;
+  font-size: 1.5rem;
+  border-radius: 0.2rem;
+  color: #376767; 
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  background-color: #eaf6f6; 
+}
+h1 {
+  color: #f76b8a;
+}
+#input-container {
+  display: flex;
+  flex-direction: row;
+  margin: 1rem;
+  align-items: center;
+  justify-content: center;
+  border: 3px double #376767;
+  background-color: #66bfbf;
+}
+#inputs {
+  margin: 0.3rem;
+  display: flex;
+  flex-direction: column;
+}
+#txtTodoItemTitle {
+  all: unset;
+  margin: 0.3rem;
+  background-color: #eaf6f6;
+  border: 3px dashed #98d2d2;
+  caret-color: #376767;
+  padding: 0.1rem;
+}
+#txtTodoItemDescription {
+  all: unset;
+  background-color: #eaf6f6;
+  margin: 0.3rem;
+  border: 3px dashed #98d2d2;
+  caret-color: #376767;
+  padding: 0.1rem;
+}
+#btnAddTodo {
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 1rem;
+  cursor: pointer;
+  text-align: center;
+  color: #f76b8a;
+  background-color: #fcfefe;
+  border: 3px double #ffcfda;
+}
+::placeholder {
+  color: #819f9f;
+  opacity: 1;
+}
+#btnAddTodo:hover {
+  background-color: #ffedf2;
+}
+#todoList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.toDoItem{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0.3rem;
+  border: 3px dashed #ffb7c6;
+  background-color: #fcfefe;
+  cursor: pointer;
+  width: 25rem;
+}
+.toDoItem:hover {
+  border: 3px dashed #66bfbf;
+}
+.todo__item--completed{
+  text-decoration: line-through;
+}
+.toDoText {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  margin-left: 5%;
+  width: 80%;
+}
+.btnDeleteTodo {
+  margin: 1rem;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-image: url("https://cdn-icons-png.flaticon.com/512/4021/4021663.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media screen and (max-width: 414px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  #input-container {
+      width: 95vw;
+      margin: 2vw 0;
+    padding: 0;
+  }
+  #inputs{
+    width: 70vw;
+    margin: 2vw;
+    padding: 0;
+  }
+  #btnAddTodo{
+    margin: 0;
+    padding: 0;
+  }
+  #txtTodoItemTitle, #txtTodoItemDescription{
+    margin: 1vw;
+    padding: 1vw;
+  }
+  .toDoItem{
+    margin: 2vw;
+    padding: 0;
+    width: 95vw;
+    justify-content: space-between;
+  }
+  .toDoText {
+    margin: 0;
+    width: 60vw;
+  }
+}
