@@ -63,7 +63,7 @@ const createListItem = (listObject) => {
     divForToDoItem.classList.add('toDoItem');
   }
   divForToDoItem.addEventListener('click', (event) => {
-    if (event.path[0].getAttribute('class') !== 'btnDeleteTodo') {
+    if (event.composedPath()[0] !== 'btnDeleteTodo') {
       const { id } = divForToDoItem;
       switchIsDone(id);
       renderAllToDoItems();
